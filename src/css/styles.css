@@ -1,0 +1,92 @@
+body {
+  /* background-color: #000000;   */
+  overflow: hidden;
+  font-family: "Roboto", sans-serif;
+}
+
+main::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-height: 100vh;
+  width: 80vw;
+  background: linear-gradient(-233deg, #000 40%, rgba(0, 0, 0, 0) 65%) no-repeat;
+}
+
+main .personagem {
+  height: 100vh;
+  display: none;
+}
+
+main .personagem.selecionado {
+  display: block;
+}
+
+main  .personagem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.conteudo {
+  max-width: 380px;
+  height: 100vh;
+  position: absolute;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+  left: 120px;
+  top: 0;
+}
+
+.conteudo .titulo {
+  font-size: 38px;
+  color: #f1f1f1;
+  text-transform: capitalize;
+  padding-bottom: 7px;
+}
+
+.conteudo .descricao {
+  color: #f1f1f1;
+  font-size: 17px;
+  font-weight: 300;
+}
+
+.botoes {
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 180px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.botoes li {
+  padding: 5px;
+}
+
+.botoes .botao {
+  border: none;
+  background: #000000;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.botoes .botao img {
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  object-fit: cover; 
+}
+
+.botoes .botao.selecionado {
+  transform: scale(1.2);
+  box-shadow: 0 0 10px #d9d9d9;
+}
